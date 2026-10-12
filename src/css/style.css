@@ -1,0 +1,173 @@
+/* Remove as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* Fundo azul e centralização do cartão */
+.pagina {
+    min-height: 100vh;
+    background-color: #0875F9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+}
+
+/* Cartão preto central */
+.cartao {
+    width: 100%;
+    max-width: 410px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 35px 30px 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+/* Nome da empresa */
+.titulo {
+    font-size: 32px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+/* Destaque azul */
+.titulo span {
+    color: #08B9F9;
+}
+
+/* Subtítulo */
+.subtitulo {
+    font-size: 15px;
+    font-weight: bold;
+
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
+/* Menu */
+.menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+/* Botões */
+.botao {
+    width: 100%;
+    min-height: 50px;
+
+    background-color: #D9D9D9;
+    color: #000000;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 10px 12px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Ícones */
+.icone {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+
+    position: absolute;
+    left: 12px;
+}
+
+/* Texto dos botões */
+.botao span {
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse */
+.botao:hover {
+    background-color: #08B9F9;
+    transform: translateY(-2px);
+}
+
+/* Acessibilidade para navegação pelo teclado */
+.botao:focus-visible {
+    outline: 3px solid #08B9F9;
+    outline-offset: 4px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 480px) {
+
+    .pagina {
+        padding: 20px 15px;
+    }
+
+    .cartao {
+        max-width: 360px;
+        padding: 30px 24px 35px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .botao span {
+        font-size: 14px;
+    }
+
+}
